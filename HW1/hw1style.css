@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.container{
+	display:grid;
+	grid-template-columns: 1fr 5fr;
+	grid-template-rows: 0.1fr 1.5fr 0.09fr;
+	grid-template-areas: 
+		"header header"
+		"sidebar main"
+		"footer footer";
+		
+	grid-gap: 0.2rem;	
+}
+
+
+header {
+	background-color: lightsteelblue;
+	grid-area: header; 
+}
+
+header h1{
+	padding:10px 30px 0;
+}
+
+main{
+	background-color:whitesmoke;
+	grid-area:main;
+}
+
+.sidebar {
+	background-color: white;
+	grid-area: sidebar;
+}
+
+footer{
+	background-color: black;
+	grid-area: footer;
+	padding:30px;
+	text-align: center;
+	color:white;
+}
+
+footer a {
+	text-decoration: none;
+	color:white;
+}
+
+
+
+p {
+	font-size: 18px;
+	padding: 10px;
+
+}
+
+
+body {
+  margin: 0 auto;
+  max-width: 70em;
+  padding: 1em 0;
+}
+
+
+header{
+	padding: 0;
+	margin:0;
+}
+
+header h1{
+	text-transform: uppercase;}
+	
+	
+.sidebar nav a{
+	
+	padding-bottom: 20px;
+	padding-right: 20px;
+	display: block;
+	margin:30px;
+	text-align: center;
+	text-decoration: none;
+	padding-top:30px;
+	color:black;
+	font-weight: bold;
+	font-size: 20px
+
+}
+
+
+
+/*edit below for main content */
+
+#bio img {
+	float: left;
+	padding-right:10px;
+}
+
+#bio{
+	text-align: justify;
+}
+
+#bio h1 {
+	padding-top:40px;
+	text-align: center;
+}
+	
+
+#path{
+	clear:both;
+	padding-top:20px;
+	text-align:justify;
+}
+
+h2{
+	text-align: center;
+}
+
+
+@media only screen and (max-width:550px){
+	.container {
+		display: block;
+		grid-template-colums: 1fr;
+		grid-template-rows: 0.01fr 0.3fr 1.5fr 0.01fr;
+		grid-template-areas: 
+			"header"
+			"sidebar"
+			"main"
+			"footer";
+	}
+	
+	.sidebar nav a{
+		display: inline;
+		margin:5px;
+	}
+	
+	.sidebar nav {
+		text-align: center;
+	}
+	
+	
+	#bio h1 {
+		text-align: center;
+		
+	}
+	#header h1{
+		text-align: center;
+	}
+	
+}
+

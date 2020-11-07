@@ -1,0 +1,47 @@
+* { background-color:#C0DEED;}
+
+
+.banner{
+  position: relative;
+  animation: banner 20s infinite;
+  animation-timing-function: linear;
+}
+
+
+#sky {
+z-index:-1;
+position:fixed;
+top:0px;left:0px;
+width:100%;
+height:100%;
+text-align:center;
+margin:0px;
+padding:0px;
+background-color:#C0DEED;
+background: url(clouds.png) center top repeat-x;
+padding-top:300px;
+padding-bottom:10px;
+background-repeat: repeat-x;
+-webkit-animation: moving 20s linear infinite;
+ainimation: moving 20s linear infinite;
+}
+
+
+@keyframes moving{
+    from{
+        background-position: 0 0;
+    }
+    to{
+       background-position: 100% 0; 
+    }
+}
+
+@keyframes banner{
+    from{
+        left:0px;
+    }
+    to{
+       left:100%; 
+    }
+    
+}
